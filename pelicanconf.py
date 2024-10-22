@@ -27,8 +27,6 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ("Log in", "https://ameising.ai/app"),
-    ("Sign up", "https://ameising.ai/auth/register"),
 )
 
 # Social widget

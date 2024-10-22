@@ -11,7 +11,7 @@ save_as: index.html
                 <p>Kunstig intelligens (KI) er et viktig verktøy for å løse nye problemer og forbedre vårt liv. 
                 <b><i>Ameising</i></b> leverer KI tilpasset det norske markedet.</p>
             </div>
-            <a href="https://ameising.ai/auth/register" class="btn btn-accent mt-8">Prøv gratis!</a>
+            <a href="https://app.ameising.ai/auth/register" class="btn btn-accent mt-8">Prøv gratis!</a>
         </div>
     </div>
 </div>
@@ -23,9 +23,9 @@ save_as: index.html
             <div class="prose" markdown="1">
                 <h2>Er du klar til å utforske fremtiden?</h2>
                 <p><b><i>Ameising</i></b> hjelper deg å komme i gang med kunstig intelligens. 
-                Prøv vår <a href="https://ameising.ai/auth/register">KI-agent</a> og se hva den kan gjøre for deg!</p>
+                Prøv vår <a href="https://app.ameising.ai/auth/register">KI-agent</a> og se hva den kan gjøre for deg!</p>
             </div>
-            <a href="https://ameising.ai/auth/register" class="btn btn-primary mt-8">Prøv gratis!</a>
+            <a href="https://app.ameising.ai/auth/register" class="btn btn-primary mt-8">Prøv gratis!</a>
         </div>
     </div>
 </div>
