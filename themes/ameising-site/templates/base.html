@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+  <head>
+    {% block head %}
+      <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="Pelican" />
+      <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0">
+      {% if SITESUBTITLE %}
+        <meta name="description" content="{{ SITESUBTITLE }}" />
+      {% endif %}
+      <link rel="icon" href="{{ SITEURL }}/favicon.ico" />
+      <link rel="manifest" href="{{ SITEURL }}/site.webmanifest" />
+      <link rel="apple-touch-icon" href="{{ SITEURL }}/resources/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" href="{{ SITEURL }}/resources/favicon-16x16.png" sizes="16x16" />
+      <link rel="icon" type="image/png" href="{{ SITEURL }}/resources/favicon-32x32.png" sizes="32x32" />
+      {% if STYLESHEET_URL %}
+        <link rel="stylesheet" type="text/css" href="{{ STYLESHEET_URL }}" />
+      {% endif %}
+      {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
+      {% endif %}
+      {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
+      {% endif %}
+      {% if FEED_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+      {% endif %}
+      {% if FEED_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+      {% endif %}
+      {% if CATEGORY_FEED_ATOM and category %}
+        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
+      {% endif %}
+      {% if CATEGORY_FEED_RSS and category %}
+        <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
+      {% endif %}
+      {% if TAG_FEED_ATOM and tag %}
+        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
+      {% endif %}
+      {% if TAG_FEED_RSS and tag %}
+        <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
+      {% endif %}
+    {% endblock head %}
+  </head>
+
+  <body class="w-full">
+    <header>
+      <div class="navbar pr-2 sm:pr-6 mt-1 sm:mt-2">
+        <div class="flex-1 pl-1 sm:pl-4">
+          <img src="{{ SITEURL }}/images/logo-icon.svg" alt="Ameising logo" class="h-6" />
+          <a href="{{ SITEURL }}" class="btn btn-ghost text-xl p-2">{{ SITENAME }} <span class="hidden sm:inline">AI</span></a>
+        </div>
+        <div class="flex-none pr-0 mr-0">
+          <ul class="menu menu-horizontal pr-0 mr-0 gap-1 sm:gap-2">
+            <li><a href="https://ameising.ai/app" class="base-content text-inherit btn btn-sm btn-link">Logg inn</a></li>
+            <li><a href="https://ameising.ai/auth/register" class="base-content text-inherit btn btn-sm btn-primary btn-outline">Prøv gratis!</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="sm:mx-6">
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>

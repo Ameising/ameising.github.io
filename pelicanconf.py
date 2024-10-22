@@ -1,10 +1,16 @@
-AUTHOR = 'Are Meisfjord'
+AUTHOR = 'Ameising'
 SITENAME = 'Ameising'
 SITEURL = ""
+
+THEME = "ameising-site"
 
 PATH = "content"
 
 OUTPUT_PATH = 'docs/'
+
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+INDEX_SAVE_AS = 'index.html'
 
 PORT = 8080
 
@@ -21,16 +27,14 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+    ("Log in", "https://ameising.ai/app"),
+    ("Sign up", "https://ameising.ai/auth/register"),
 )
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ("LinkedIn", "#"),
+    ("X (Twitter)", "#"),
 )
 
 STATIC_PATHS = [
@@ -39,14 +43,17 @@ STATIC_PATHS = [
 ]
 
 EXTRA_PATH_METADATA = {
-    'extra/android-chrome-192x192.png': {'path': 'android-chrome-192x192.png'},
-    'extra/android-chrome-512x512.png': {'path': 'android-chrome-512x512.png'},
-    'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},
-    'extra/favicon-16x16.png': {'path': 'favicon-16x16.png'},
-    'extra/favicon-32x32.png': {'path': 'favicon-32x32.png'},
+    'extra/android-chrome-192x192.png': {'path': 'resources/android-chrome-192x192.png'},
+    'extra/android-chrome-512x512.png': {'path': 'resources/android-chrome-512x512.png'},
+    'extra/apple-touch-icon.png': {'path': 'resources/apple-touch-icon.png'},
+    'extra/favicon-16x16.png': {'path': 'resources/favicon-16x16.png'},
+    'extra/favicon-32x32.png': {'path': 'resources/favicon-32x32.png'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/site.webmanifest': {'path': 'site.webmanifest'},
+    'extra/ameising.css': {'path': 'css/ameising.css'},
 }
+
+STYLESHEET_URL = '/css/ameising.css'
 
 DEFAULT_PAGINATION = False
 
