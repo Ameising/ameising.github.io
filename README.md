@@ -22,7 +22,7 @@ npm i -D daisyui@latest
 
 ## Tailwind / DaisyUI
 ```bash
-npx tailwindcss -i ./themes/ameising-site/input.css -o ./themes/ameising-site/static/css/ameising.css --watch
+npx tailwindcss -i ./input.css -o ./content/extra/ameising.css --watch
 ```
 
 ## Pelican
@@ -33,5 +33,11 @@ pelican -r -l
 ## Update theme
 ```bash
 pelican-themes --upgrade themes/ameising-site --verbose
+```
+
+## Clean build
+```bash
+make clean
+make html
 ```
 
