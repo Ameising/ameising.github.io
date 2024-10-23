@@ -49,6 +49,7 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/site.webmanifest': {'path': 'site.webmanifest'},
     'extra/ameising.css': {'path': 'css/ameising.css'},
+    'extra/CNAME': {'path': 'CNAME'},
 }
 
 STYLESHEET_URL = '/css/ameising.css'
